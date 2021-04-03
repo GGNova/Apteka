@@ -8,6 +8,16 @@ body {
   src: url(../FONTS/Sen-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Roboto-regular";
+  src: url(../FONTS/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url(../FONTS/Roboto-Bold.ttf);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -18,7 +28,7 @@ body {
 
 .header {
   display: flex;
-  max-width: 1140px;
+  max-width: 1120px;
   margin: auto;
   background-color: #FCFCFC;
   padding: 22px;
@@ -96,6 +106,8 @@ body {
 
 .content{
   display: flex;
+  max-width: 1120px;
+  margin: auto;
 }
 
 .sections{
@@ -141,14 +153,13 @@ body {
 }
 
 .section-line-text{
-  font-family: "Sen-regular";
   font-size: 25px;
   margin-left: 10px;
 }
 
 .line-divider{
   background-color: #DDDDDD;
-  width: 295px;
+  width: 290px;
 }
 
 .arrow{
@@ -158,4 +169,98 @@ body {
   width: 24px;
   height: 31px;
   margin-left: 20px;
+}
+
+.cards-block{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width:780px;
+}
+
+.cards-block h2{
+  font-family: 'Roboto-regular',sans-serif;
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  line-height: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  box-shadow: 5px 5px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.card-image{
+  width: 170px;
+  height: 135px;
+}
+
+.card-title{
+  font-family: "Roboto-bold";
+}
+
+.card-discription{
+  width: 170px;
+  margin-top: -10px;
+}
+
+.card-price{
+  font-family: "Roboto-regular";
+  color: #666666;
+  margin-left: -100px;
+  margin-top: -10px;
+}
+
+.card-btn{
+  background-color: #32AEA0;
+  width: 120px;
+  height: 35px;
+  color: white;
+  font-family: "Roboto-bold";
+  font-size: 11.5px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: center;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  background-image: url(../ICONS/Add-to-cart.svg);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.card-btn:hover{
+  transform: scale(1.1);
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  box-shadow: 5px 5px 8px 0px rgba(34, 60, 80, 0.2);
 }
