@@ -26,6 +26,11 @@
       require_once 'cards.php';
     ?>
   </div>
+  <div class="footer">
+    <?php
+      require_once 'footer.php';
+    ?>
+  </div>
 </div>
 </body>
 </html>

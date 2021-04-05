@@ -180,6 +180,7 @@ body {
 
 .cards-block h2{
   font-family: 'Roboto-regular',sans-serif;
+  height: 0px;
 }
 
 .cards{
@@ -201,12 +202,13 @@ body {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
+  width: 175px;
+  margin-right: 20px;
+  margin-top: 50px;
 }
 
 .card:hover{
   transform: scale(1.1);
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
   box-shadow: 5px 5px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
@@ -263,4 +265,9 @@ body {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
   box-shadow: 5px 5px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.footer{
+  display: flex;
+  width: ;
 }
