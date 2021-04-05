@@ -20,7 +20,7 @@
                 ?>
 
                 <form class="cards" method="POST" action="">
-                    <button class="card">
+                    <button class="card" name="<?php echo $product['ProductTypeId']; ?>">
                         <img src="<?php echo $product['ProductPickture']; ?>" alt="File not found" class="card-image">
                         <p class="card-title"><?php echo $product['ProductName']; ?></p>
                         <p class="card-discription"><?php echo $product['ProductDiscription']; ?></p>
