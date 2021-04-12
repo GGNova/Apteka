@@ -71,8 +71,8 @@ body {
   background-repeat: no-repeat;
   background-image: url(../ICONS/shop-cart.svg);
   background-size: 40px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border: none;
   background-color: transparent;
   outline: none;
@@ -653,16 +653,10 @@ body {
   transform: scale(1.05);
 }
 
-.user-caninet-main{
+.user-cabinet-main{
   display: flex;
   flex-direction: column;
   width: 630px;
-  margin-left: 100px;
-}
-
-.user-caninet-main h2{
-  font-family: "Roboto-regular";
-  font-size: 35px;
 }
 
 .logOut-icon{
@@ -670,19 +664,91 @@ body {
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
+  margin-top: 7px;
 }
 
 .logOut{
   display: flex;
-  width: 500px;
-}
-
-.logOut p{
-  width: 150px;
+  transition: 0.5s;
 }
 
 .logOut a{
   color: #5DE8D7;
-  margin-left: 20px;
   font-family: "Roboto-regular";
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.user-cabinet-profile h2{
+  font-family: "Roboto-regular";
+  font-size: 35px;  
+}
+
+.user-cabinet-profile{
+  line-height: 1px;
+  margin: 20px;
+}
+
+.user-cabinet-accountInfo{
+  display: flex;
+}
+
+.user-cabinet-accountTitle h4{
+  font-family: "Roboto-regular";
+  color: #C0C0C0;
+  font-weight: 500;
+}
+
+.user-cabinet-accountText p{
+  color: #5DE8D7;
+  font-family: "Roboto-regular";
+}
+
+.user-cabinet-accountText a{
+  text-decoration: none;
+  display: flex;
+  margin-top: -15px;
+}
+
+.pencil{
+  background-image: url(../ICONS/pencil.svg);
+  background-repeat:no-repeat;
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+  margin-top: 7px;
+}
+
+.user-cabinet-verticalDivider{
+  height: 35px;
+  width: 2px;
+  background-color: #DDDDDD;
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+
+.user-cabinet-accountText .dots{
+  width: 10px;
+  height: 10px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: block;
+  margin-top: 10px;
+}
+
+.user-cabinet-accountText .dots:nth-child(2){
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.user-cabinet-accountText .dots:nth-child(4){
+  margin-left: 5px;
+  margin-right: 5px;
 }

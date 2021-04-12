@@ -21,6 +21,8 @@ if(count($user) == 0){
 
 setcookie('user', $user['userFIO'], time() + 3600 * 24 * 7, "/");
 
+setcookie('userId', $user['userId'], time() + 3600 * 24 * 7, "/");
+
 $mysqli->close();
 
 header('Location: index.php');

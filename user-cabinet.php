@@ -23,6 +23,12 @@
         <?php
             require_once 'user-cabinet-content.php';
         ?>
+    </div>
+    <div class="footer">
+
+        <?php
+          require_once 'footer.php';
+        ?>
 
     </div>
 </div>
