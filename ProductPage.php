@@ -45,7 +45,7 @@
           <h3>Описание:</h3><p><?php echo $product['ProductDiscription']; ?></p>
         </div>
 
-        <button class="productPage-contentDiscription-btn">Добавить в корзину</button>
+        <a href="add-to-cart.php?id=<?php echo $product['ProductId']; ?>" class="productPage-contentDiscription-btn"><button class="productPage-contentDiscription-btn">Добавить в корзину</button></a>
       </div>
       </div>
   </div>

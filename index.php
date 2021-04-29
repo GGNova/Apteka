@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+  error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +14,16 @@
 <body>
 <!-- Подключение PhP -->
   <?php
+
+    $_SESSION['cart'];
+
+    var_dump($_SESSION['cart']);
+
     require_once 'connection.php';
+    
     $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link)); 
+
   ?>
 <!-- Основное окно -->
 <div class="main">
@@ -31,6 +42,13 @@
 
   </div>
 
+  <!-- Корзина -->
+  <div class="cart-wind-bg">
+  <?php
+    require_once 'cart.php';
+  ?>
+  </div>
+
   <!-- Подсоединение блока header -->
   <?php
     require_once 'header.php';
@@ -45,9 +63,11 @@
     ?>
     
     <!-- Подсоединение карточек с товаром -->
+    <div class="cards">
     <?php
       require_once 'cards.php';
     ?>
+    </div>
   </div>
 
  <!-- Блок footer -->
@@ -69,6 +89,9 @@
   const RegOpener = document.querySelector(".LogIn-footer button");
   const RegCloser = document.querySelector(".closer-reg")
   const RegWind = document.querySelector(".registration-bg");
+  const CartWind = document.querySelector(".cart-wind-bg");
+  const CartWindCloser = document.querySelector(".closer-cart"); 
+  const CartWindOpener = document.querySelector(".header_shop-cart");
 
   // Функция открытия окна входа авторизации
   function LogInOpening(){
@@ -99,9 +122,20 @@
   RegOpener.addEventListener("click",RegOpening);
   RegCloser.addEventListener("click",RegClosing);
 
-  function ProductList(){
-    this.getAttribute
+  function CartOpening(){
+    CartWind.classList.remove("cart-wind-bg");
+    CartWind.classList.add("cart-wind-bg-opened");
   }
+
+  function CartClosing(){
+    CartWind.classList.remove("cart-wind-bg-opened");
+    CartWind.classList.add("cart-wind-bg");
+  }
+
+  CartWindOpener.addEventListener("click",CartOpening);
+  CartWindCloser.addEventListener("click",CartClosing);
+
+
 </script>
 </body>
 </html>
