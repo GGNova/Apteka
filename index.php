@@ -16,14 +16,11 @@
 
     $_SESSION['cart'];
 
-    // echo '<pre>';
-    // var_dump($_SESSION['cart']);
-    // echo '</pre>';
-
     require_once 'connection.php';
     
     $link = mysqli_connect($host, $user, $password, $database) 
     or die("Ошибка " . mysqli_error($link)); 
+    
 
   ?>
 <!-- Основное окно -->
@@ -82,17 +79,31 @@
 
 </div>
 
+<!-- <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+function cartMinus() {
+  $.get("cart-count-minus.php");
+  // return false;
+  console.log("LOL")
+}
+
+// function cartPlus(){
+//   $.get(".php");
+//   return false;
+// }
+</script> -->
+
 <script>
   // Создание переменных 
-  const LogInOpener = document.querySelector(".header_LogIn");
-  const LogInCloser = document.querySelector(".closer");
-  const LogInWindow = document.querySelector(".LogIn-bg");
-  const RegOpener = document.querySelector(".LogIn-footer button");
-  const RegCloser = document.querySelector(".closer-reg")
-  const RegWind = document.querySelector(".registration-bg");
-  const CartWind = document.querySelector(".cart-wind-bg");
-  const CartWindCloser = document.querySelector(".closer-cart"); 
-  const CartWindOpener = document.querySelector(".header_shop-cart");
+  let LogInOpener = document.querySelector(".header_LogIn");
+  let LogInCloser = document.querySelector(".closer");
+  let LogInWindow = document.querySelector(".LogIn-bg");
+  let RegOpener = document.querySelector(".LogIn-footer button");
+  let RegCloser = document.querySelector(".closer-reg")
+  let RegWind = document.querySelector(".registration-bg");
+  let CartWind = document.querySelector(".cart-wind-bg");
+  let CartWindCloser = document.querySelector(".closer-cart"); 
+  let CartWindOpener = document.querySelector(".header_shop-cart");
 
   // Функция открытия окна входа авторизации
   function LogInOpening(){
@@ -105,8 +116,11 @@
     LogInWindow.classList.add("LogIn-bg");
   }
   // Добавление слушателей событий для окна авторизации
+  console.log(typeof LogInOpener)
+  if( LogInOpener != null){
   LogInOpener.addEventListener("click",LogInOpening);
   LogInCloser.addEventListener("click",LogInClosing);
+  }
 
   // Функция открытия окна регистрации
   function RegOpening(){
@@ -120,13 +134,18 @@
     RegWind.classList.add("registration-bg");
   }
 
+
+
   RegOpener.addEventListener("click",RegOpening);
   RegCloser.addEventListener("click",RegClosing);
 
+
   function CartOpening(){
+    console.log(CartWind);
     CartWind.classList.remove("cart-wind-bg");
     CartWind.classList.add("cart-wind-bg-opened");
-  }
+    console.log(CartWind);
+      }
 
   function CartClosing(){
     CartWind.classList.remove("cart-wind-bg-opened");
