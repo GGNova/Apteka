@@ -51,6 +51,15 @@
                 </div>
             </div>
             <div class="user-cabinet-verticalDivider"></div>
+
         </div>
+    </div>
+    <div class="user-cabinet-orders">
+        <p>Вскоре вы сможете посмотреть здесь свои заказы.</p>
+    </div>
+    <div class="user-cabinet-deleteAcc">
+        <a href="deleteAccount.php"><button>Удалить аккаунт</button></a>
+        <p>Вы можете удалить свою учетную запись без возможности восстановления.<br>
+Ваша история заказов будет очищена.</p>
     </div>
 </div>

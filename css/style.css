@@ -673,6 +673,45 @@ body {
   width: 870px;
 }
 
+.user-cabinet-orders{
+  margin-left: 20px;
+}
+
+.user-cabinet-deleteAcc{
+  display: flex;
+  margin-left: 20px;
+}
+
+.user-cabinet-deleteAcc p{
+  font-family: "Roboto-regular";
+  color: #888888;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.user-cabinet-deleteAcc button{
+  width: 165px;
+  height: 45px;
+  background-color: #32AEA0;
+  color: white;
+  font-family: "Roboto-regular";
+  border: none;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.user-cabinet-deleteAcc button:hover{
+  background-color: #FF0000;
+}
+
 .logOut-icon{
   background-image: url(../ICONS/LogOut.svg);
   width: 18px;
@@ -871,8 +910,8 @@ body {
 }
 
 .cart-wind{
-  width: 750px;
-  height: 500px;
+  width: 850px;
+  height: 600px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -882,26 +921,25 @@ body {
   bottom: 0;
   left: 0;
   margin: auto;
-  justify-content: space-between;
-  align-items: center;
+  overflow: scroll;
 }
 
 .cart-wind-headline{
   display: flex;
   justify-content: space-between;
-  width: 700px;
+  width: 800px;
 }
 
 .cart-wind-headline h4{
   color: #32AEA0;
   font-family: "Roboto-bold";
   font-size: 24px;
+  margin-left: 20px;
 }
 
 .closer-cart{
   display: flex;
   cursor: pointer;
-  margin-right: 20px;
   margin-top: 20px;
   transition: 0.5s;
 }
@@ -923,7 +961,177 @@ body {
   transform: rotate(-45deg);
 }
 
+.cart-wind-content{
+  display: flex;
+}
+
+.cart-lines{
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-cart{
+  font-family: "Roboto-regular";
+}
+
 .cart-line{
-  width: 720px;
+  width: 600px;
   height: 150px;
+  display: flex;
+  margin-top: 10px;
+  line-height: 0.1px;
+}
+
+
+.cart-product-pick{
+  width: 150px;
+  height: 150px;
+}
+
+.cart-line-productInfo{
+  margin-left: 20px;
+  border: 1px solid #E5E5E5;
+  width: 550px;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-productInfo-name{
+  display: flex;
+  margin-left: 10px;
+  width: 98%;
+  justify-content: space-between;
+}
+
+.cart-productInfo-name p{
+  font-family: "Roboto-regular";
+}
+
+.cart-verify{
+  width: 20px;
+  height: 20px;
+}
+
+.cart-productInfo-price{
+  display: flex;
+  margin-left: 10px;
+}
+
+.cart-productInfo-price p{
+  font-family: "Roboto-regular";
+}
+
+.cart-productInfo-counter{
+  display: flex;
+  margin-left: 10px;
+}
+
+.count-window{
+  border: 1px solid #DADADA;
+  width: 30px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto-regular";
+}
+
+.cart-minus{
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.cart-plus{
+  margin-left: 1px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.cart-productInfo-btns{
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.cart-btns-buyOne{
+  width: 150px;
+  height: 30px;
+  border: none;
+  font-family: "Roboto-regular";
+  color: white;
+  background-color: #32AEA0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.cart-btns-remove{
+  width: 150px;
+  height: 30px;
+  border: none;
+  font-family: "Roboto-regular";
+  color: white;
+  background-color: #FF0000;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-left: 15px;
+}
+
+.cart-info{
+  display: block;
+  width: 200px;
+  height: 170px;
+  border: 1px solid #DADADA;
+  margin-left: 16px;
+  margin-top: 10px;
+}
+
+.cart-info p{
+  font-family: "Roboto-regular";
+  margin-left: 5px;
+}
+
+.cart-info-order{
+  width: 155px;
+  height: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: "Roboto-regular";
+  background-color: #32AEA0;
+  margin-left: 22px;
+  cursor: pointer;
+  outline: none;
+}
+
+.cart-info-dropCart{
+  width: 155px;
+  height: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: "Roboto-regular";
+  background-color: #FF0000;
+  margin-left: 22px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
 }
