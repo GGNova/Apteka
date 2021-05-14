@@ -32,7 +32,17 @@
               <p>Цена за штуку: <?php echo $product['ProductPrice'];?> руб. </p>
             </div>
             <div class="cart-productInfo-counter">
-              <a href="cart-count-minus.php"><img src="ICONS/minus.svg" alt="ERROR 404" class="cart-minus"></a>
+              <a href="#"><img src="ICONS/minus.svg" alt="ERROR 404" class="cart-minus" onclick="cartMinus(<?php $value['id'] ?>)"></a>
+
+              <script>
+                function cartMinus(id){
+                  console.log('text');
+                  let cartElem = <?php echo json_encode($_SESSION['cart']); ?>
+                  console.log(cartElem);
+                }
+                addEventListener('onclick', cartMinus);
+              </script>
+
               <div class="count-window">
                 <p><?php echo $value['count']; ?></p>
               </div>
@@ -57,7 +67,8 @@
       <div class="cart-info">
         <p>Количество товаров: <?php echo $count; ?></p>
         <p>Итого: <?php echo $TotalPrice; ?> руб.</p>
-        <a href="#"><button>Оформить заказ</button></a>
+        <a href="#"><button class="cart-info-order">Оформить заказ</button></a>
+        <a href="dropCart.php"><button class="cart-info-dropCart">Отчистить корзину</button></a>
       </div>
 
       </div>
