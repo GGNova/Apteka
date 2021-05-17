@@ -8,9 +8,16 @@
 
     $result = mysqli_query($link, "SELECT * FROM `producttype`");
 
-    $productType = mysqli_fetch_assoc($result);
-    
-    
+    if ($_COOKIE['admin'] != ''){
+        ?>
+            <a href="addSection.php" class="admin-line">
+                <img src="ICONS/productAdd-plus.svg" alt="Img not found" class="section-line-pick">
+                <p class="section-line-text">Добавить секцию</p>
+                <div class="arrow"></div>
+            </a>
+            <hr class="line-divider">
+        <?php
+    }
 
     ?>
     

@@ -7,8 +7,16 @@
 
         $result = mysqli_query($link, "SELECT * FROM `product`");
 
-        $product = mysqli_fetch_assoc($result);
-
+        if($_COOKIE['admin'] != ''){
+            ?>
+            <div class="Admin-cardGroup">
+                <a href="addProduct.php" class="admin-card">
+                    <img src="ICONS/productAdd-plus.svg" alt="ERROR 404">
+                    <p>Добавить товар</p>
+                </a>
+                </div>
+            <?php
+        }
         ?>
 
         <?php 

@@ -202,7 +202,6 @@ body {
   border: none;
   outline: none;
   width: 300px;
-
 }
 
 .line:hover {
@@ -1262,5 +1261,84 @@ body {
 
 .admin-deleteUser a {
   text-decoration: none;
+}
 
+.admin-cardGroup{
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.admin-card{
+  background-color: #C4C4C4;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  line-height: 15px;
+  width: 175px;
+  height: 300px;
+  margin-top: 50px;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto-regular";
+  font-size: 12px;
+  text-align: center;
+}
+
+.admin-card p{
+  font-size: 18px;
+  font-family: "Roboto-bold";
+}
+
+.productAdd-window{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.productAdd-window h2{
+  font-family: "Roboto-regular";
+}
+
+.productAdd-mainBlock{
+  border: 1px solid #EEEEEE;
+  width: 820px;
+  height: 400px;
+}
+
+.addProduct-form{
+  display: flex;
+  flex-direction: column; 
+}
+
+.admin-addProduct-input{
+  width: 250px;
+  height: 20px;
+  margin-top: 10px;
+  font-family: "Roboto-regular";
+}
+
+.admin-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  background-color: #EEEEEE;
+  border: none;
+  outline: none;
+  width: 300px;
+  text-decoration: none;
+  color: black;
 }
