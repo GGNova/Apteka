@@ -21,7 +21,7 @@
 
         <?php 
             while($product = mysqli_fetch_assoc($result))
-            {
+            {if($product['ProductCount']){
                 ?>
                 <div class="card-group">
                     <a href="ProductPage.php?name=<?php echo $product['ProductId']; ?>" class="card">
@@ -35,6 +35,7 @@
 
 
             <?php
+            }
         }
         ?>
 
