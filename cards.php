@@ -1,5 +1,5 @@
 <div class="cards-block">
-<h2>Специальные Предложения</h2>  
+<h2>Список товаров</h2>  
     <div class="cards">  
         <?php
 
@@ -7,8 +7,16 @@
 
         $result = mysqli_query($link, "SELECT * FROM `product`");
 
-        $product = mysqli_fetch_assoc($result);
-
+        if($_COOKIE['admin'] != ''){
+            ?>
+            <div class="Admin-cardGroup">
+                <a href="addProduct.php" class="admin-card">
+                    <img src="ICONS/productAdd-plus.svg" alt="ERROR 404">
+                    <p>Добавить товар</p>
+                </a>
+                </div>
+            <?php
+        }
         ?>
 
         <?php 
@@ -17,9 +25,9 @@
                 ?>
                 <div class="card-group">
                     <a href="ProductPage.php?name=<?php echo $product['ProductId']; ?>" class="card">
-                        <img src="<?php echo $product['ProductPickture']; ?>" alt="File not found" class="card-image">
+                        <img src="IMG/<?php echo $product['ProductPickture']; ?>" alt="File not found" class="card-image">
                         <p class="card-title"><?php echo $product['ProductName']; ?></p>
-                        <p class="card-discription"><?php echo $product['ProductDiscription']; ?></p>
+                        <p class="card-discription"><?php echo $product['Brief']; ?></p>
                         <p class="card-price"><?php echo $product['ProductPrice']; ?> р</p>
                             <a href="add-to-cart.php?id=<?php echo $product['ProductId']; ?>" class="card-btn">В корзину</a>
                     </a>
