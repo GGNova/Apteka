@@ -201,7 +201,10 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
-  width: 300px;
+  width: 320px;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto-regular";
 }
 
 .line:hover {
@@ -260,7 +263,6 @@ body {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .card-group {
@@ -270,6 +272,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card {
@@ -1006,6 +1010,8 @@ body {
 
 .empty-cart {
   font-family: "Roboto-regular";
+  margin-left: 25px;
+  font-size: 25px;
 }
 
 .cart-line {
@@ -1102,10 +1108,14 @@ body {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-btns-remove {
-  width: 150px;
+  width: 160px;
   height: 30px;
   border: none;
   font-family: "Roboto-regular";
@@ -1119,6 +1129,10 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   margin-left: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-info {
@@ -1226,14 +1240,16 @@ body {
   width: 750px;
   height: 70px;
   border: 1px solid #EEEEEE;
+  margin-top: 10px;
+  margin-left: 7px;
 }
 
 .admin-userInfo {
   display: flex;
   align-items: center;
-  border: 1px solid #EEEEEE;
+  border: none;
   height: 15px;
-  width: 650px;
+  width: 100%;
 }
 
 .admin-userInfo h3 {
@@ -1257,6 +1273,7 @@ body {
   cursor: pointer;
   color: white;
   font-size: 12px;
+  margin-left: 10px;
 }
 
 .admin-deleteUser a {
@@ -1310,7 +1327,7 @@ body {
 
 .productAdd-mainBlock{
   border: 1px solid #EEEEEE;
-  width: 820px;
+  width: 800px;
   height: 400px;
 }
 
@@ -1324,6 +1341,7 @@ body {
   height: 20px;
   margin-top: 10px;
   font-family: "Roboto-regular";
+  margin-left: 5px;
 }
 
 .admin-line {
@@ -1338,7 +1356,228 @@ body {
   background-color: #EEEEEE;
   border: none;
   outline: none;
-  width: 300px;
+  width: 320px;
   text-decoration: none;
   color: black;
+  font-family: 'Roboto-regular';
+}
+
+.productAdd-mainBlock label{
+  font-family: "Roboto-regular";
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: 5px;
+}
+
+.admin-addProduct-btn{
+  border: none;
+  background-color: #32AEA0;
+  color: white;
+  width: 175px;
+  height: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.admin-addSection-window{
+  margin-left: 20px;
+  font-family: "Roboto-regular";
+}
+
+.addSectionWind{
+  border: 1px solid #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 800px;
+  height: 400px;
+  font-family: "Roboto-regular";
+}
+
+.addSections-input{
+  width: 250px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.addSectionWind label{
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+} 
+
+.cardsSearched-window{
+  font-family: "Roboto-regular";
+  margin-left: 20px;
+}
+
+.searchedCards{
+  width: 800px;
+}
+
+.admin-sections{
+  margin-left: 20px;
+  font-family: 'Roboto-regular';
+  width: 800px;
+}
+
+.admin-sections-wind{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #EEEEEE;
+  overflow: scroll;
+}
+
+.admin-sections-line{
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.admin-sections-icon{
+  width: 75px;
+  height: 75px;
+}
+
+.admin-sections-info{
+  font-family: "Roboto-regular";
+  width: 100%;
+  height: 70px;
+  border: 1px solid #EEEEEE;
+  line-height: 10px;
+  margin-left: 5px;
+}
+
+.admin-sections-info p{
+  margin-left: 10px;
+}
+
+.admin-sections-btns{
+  display: flex;
+}
+
+.admin-sections-edit{
+  background-color: #32AEA0;
+  color: white;
+  text-decoration: none;
+  outline: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  border: none;
+  width: 130px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.admin-sections-edit:hover{
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  border: 1px solid black;
+}
+
+.admin-sections-delete{
+  background-color: #FF0000;
+  color: white;
+  text-decoration: none;
+  outline: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  border: none;
+  width: 130px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.admin-sections-delete:hover{
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  border: 1px solid black;
+}
+
+.editSection-block{
+  margin-left: 20px;
+  width: 800px;
+}
+
+.editSection-form{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto-regular';
+  width: 800px;
+}
+
+.editSection-form img{
+  width: 50px;
+  height: 50px;
+}
+
+.editSection-inputStyle{
+  width: 200px;
+}
+
+.editSection-btn{
+  width: 150px;
+  height: 20px;
+  background-color: #32AEA0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+}
+
+.cart-info-countBtn{
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: "Roboto-regular";
+  background-color: #32AEA0;
+  margin-left: 22px;
+  cursor: pointer;
+  outline: none;
 }

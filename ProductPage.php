@@ -30,7 +30,7 @@
       <h2><?php echo $product['ProductName']; ?></h2>
     </div>
     <div class="productPage-main-content">
-      <img src="<?php echo $product['ProductPickture']; ?>" class="productPage-main-contentPick">
+      <img src="IMG/<?php echo $product['ProductPickture']; ?>" class="productPage-main-contentPick">
       <div class="productPage-main-contentDiscritption">
 
         <div class="display-flex productPage-contentDiscription-text">

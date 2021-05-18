@@ -1,12 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
-
 require_once 'connection.php';
-
-$AdminLog = 'Bylaranzaa';
-
-$AdminPas = 'KJeEvK6yUOTYQ5qjSCMc';
 
 $login = filter_var(trim($_POST['login']),
 FILTER_SANITIZE_STRING);
@@ -23,7 +17,7 @@ $user = $result->fetch_assoc();
 if(count($user) == 0){
     echo 'Такой пользователь не существует';
     exit();
-}else if($login == $AdminLog and $password == $AdminPas) {
+}else if($user['UserType'] == 1) {
     setcookie('admin', $user['userFIO'], time() + 3600 * 24 * 7, "/");
 }else{
     setcookie('user', $user['userFIO'], time() + 3600 * 24 * 7, "/");

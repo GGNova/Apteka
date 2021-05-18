@@ -1,6 +1,8 @@
 <div class="header">
   <a href="index.php" class="Logo"></a>
-  <input type="search" class="Search-Box" placeholder="Найти нужное лекарство"></input>
+  <form action="cardSeached.php" method="POST" class="">
+  <input type="search" class="Search-Box" placeholder="Найти нужное лекарство" name="search">
+  </form>
   <?php
     if($_COOKIE['user'] == '' and $_COOKIE['admin'] == ''):
   ?>

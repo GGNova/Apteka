@@ -26,7 +26,6 @@
         <div class="admin-users-window">
           <?php
                 $result = mysqli_query($link, "SELECT * FROM user");
-                $user = mysqli_fetch_assoc($result);
                 while($user = mysqli_fetch_assoc($result)){
                   $userId = $user['userId'];
                   ?>

@@ -22,13 +22,17 @@
 
         <input type="text" name="productName" placeholder="Введите название товара" class="admin-addProduct-input">
 
-        <input type="text" name="productPrice" placeholder="Введите цену товара" class="admin-addProduct-input">
+        <input type="number" name="productPrice" placeholder="Введите цену товара" class="admin-addProduct-input">
 
         <input type="number" name="productCount" placeholder="Введите количество товара" class="admin-addProduct-input">
 
         <input type="text" name="productProducer" placeholder="Введите изготовителя товара" class="admin-addProduct-input">
 
         <input type="text" name="productDiscription" placeholder="Введите описание товара" class="admin-addProduct-input">
+
+        <input type="text" name="productBrief" placeholder="Введите краткое описание товара" class="admin-addProduct-input">
+
+        <label for="productType">Выберите тип товара:</label>
 
         <select class="admin-addProduct-input" name="productType">
           <?php 
@@ -43,10 +47,12 @@
             }
           ?>
         </select>
+        
+        <label for="photo">Загрузите фотографию товара:</label>
 
-        <input type="file" name="photo" multiple accept="image/png,image/jpeg,image/bmp" class="admin-addProduct-input addProduct-photo">
+        <input type="file" name="photo" multiple accept="image/png,image/jpeg,image/bmp, image/svg" class="admin-addProduct-input addProduct-photo">
 
-        <input type="submit" value="Отправить данные" class="admin-addProduct-input">
+        <input type="submit" value="Отправить данные" class="admin-addProduct-input admin-addProduct-btn">
       </form>
       </div>
     </div>

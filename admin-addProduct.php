@@ -14,15 +14,19 @@
   
   $productDiscription = $_POST['productDiscription'];
 
+  $productBrief = $_POST['productBrief'];
+
   $productPhoto = $_FILES['photo']['name'];
 
   $folder = "IMG/".$_FILES['photo']['name'];
 
   move_uploaded_file($_FILES['photo']['tmp_name'], $folder);
 
-  var_dump($productPhoto);
+  echo '<pre>';
+  var_dump($productName, $productPrice, $productCount, $productType, $productProducer, $productDiscription, $productPhoto);
+  echo '</pre>';
 
-  // $result = mysqli_query($link, "INSERT INTO product VALUES(NULL, '$productName', '$productType', '$productPrice', '$productPhoto', '$productProducer', '$productCount', '$productDiscription', NULL)");
+  $result = $mysqli->query("INSERT INTO product VALUES(NULL, '$productName', '$productType', '$productPrice', '$productPhoto', '$productProducer', '$productCount', '$productDiscription','$productBrief', NULL)");
 
   // header("Location: index.php");
 

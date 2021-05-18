@@ -3,9 +3,8 @@
 
     $id = $_GET['arrId'];
 
-    $_SESSION['cart'][$id]['count'] += 1;
+    unset($_SESSION['cart'][$id]);
 
     header("Location: index.php");
-
 
 ?>

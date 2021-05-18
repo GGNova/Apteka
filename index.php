@@ -1,6 +1,8 @@
-<?php 
+<?     
+if(session_id() == '') {
   session_start();
-?>
+}
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +15,11 @@
 <body>
 <!-- Подключение PhP -->
   <?php
-
     $_SESSION['cart'];
+
+    echo '<pre>';
+    var_dump($_SESSION['cart']);
+    echo '</pre>';
 
     require_once 'connection.php'; 
 
@@ -74,20 +79,6 @@
   </div>
 
 </div>
-
-<!-- <script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript">
-function cartMinus() {
-  $.get("cart-count-minus.php");
-  // return false;
-  console.log("LOL")
-}
-
-// function cartPlus(){
-//   $.get(".php");
-//   return false;
-// }
-</script> -->
 
 <script>
   // Создание переменных 

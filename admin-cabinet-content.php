@@ -14,6 +14,8 @@
         <div class="adminPanel-window-divider"></div>
         <a href="#">Заказы</a>
         <div class="adminPanel-window-divider"></div>
+        <a href="admin-sections.php">Секции</a>
+        <div class="adminPanel-window-divider"></div>
         </div>
     </div>
 </div>
