@@ -18,18 +18,20 @@
         <div class="editSection-block">
             <h2>Редактировать секцию</h2>
             <form method="POST" action="admin-completeEditSection.php" class="editSection-form" enctype="multipart/form-data">
+                <input type="hidden" name="productId" value="<? echo $_GET['id'] ?>">
                 <label for="newName">Старое название секции: <strong><? echo $_GET['name']; ?></strong></label>
-                <input type="text" name='newName' placeholder="Введите новое название для секции">
+                <input type="text" name='newName' class="edtiSection-inputStyle" placeholder="Введите новое название для секции" >
                 <br>
                 <label for="photo">Старая картинка секции: <img src="ICONS/<? echo $_GET['img']; ?>">загрузите новую, если надо</label>
-                <input type="file" name="photo" multiple accept="image/png,image/jpeg,image/bmp, image/svg" class="admin-addProduct-input addProduct-photo" default="">
-                <input type="submit" class="editSection-btn">
+                <input type="file" name="photo" multiple accept="image/png,image/jpeg,image/bmp, image/svg" class="admin-addProduct-input addProduct-photo">
+                <input type="submit" class="editSection-btn" value='Отправить данные'>
             </form>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer">    
         <? require_once 'footer.php'; ?>
     </div>
 </div>
+
 </body>
 </html>

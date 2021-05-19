@@ -1,6 +1,6 @@
 <div class="header">
   <a href="index.php" class="Logo"></a>
-  <form action="cardSeached.php" method="POST" class="">
+  <form action="cardSearched.php" method="POST" class="">
   <input type="search" class="Search-Box" placeholder="Найти нужное лекарство" name="search">
   </form>
   <?php
@@ -12,5 +12,11 @@
   <?php elseif($_COOKIE['admin'] != ''): ?>
     <button class="admin-cabinet"><a href="admin-cabinet.php">Администрирование</a></button>
   <?php endif; ?>
+  <?php 
+    if($_COOKIE['user'] != '' or $_COOKIE['admin'] != ''){
+  ?>
   <button class="header_shop-cart"></button>
+  <?php 
+  }
+  ?>
 </div>

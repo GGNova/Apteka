@@ -29,7 +29,10 @@
                         <p class="card-title"><?php echo $product['ProductName']; ?></p>
                         <p class="card-discription"><?php echo $product['Brief']; ?></p>
                         <p class="card-price"><?php echo $product['ProductPrice']; ?> р</p>
+                        <?php if($_COOKIE['user'] != "" or $_COOKIE['admin'] != ""){
+                            ?>
                             <a href="add-to-cart.php?id=<?php echo $product['ProductId']; ?>" class="card-btn">В корзину</a>
+                            <? } ?>
                     </a>
                 </div>
 

@@ -48,7 +48,7 @@
           ?>
         </select>
         
-        <label for="photo">Загрузите фотографию товара:</label>
+        <label for="photo">Загрузите фотографию товара:</label> 
 
         <input type="file" name="photo" multiple accept="image/png,image/jpeg,image/bmp, image/svg" class="admin-addProduct-input addProduct-photo">
 

@@ -30,7 +30,7 @@
       <h2><?php echo $product['ProductName']; ?></h2>
     </div>
     <div class="productPage-main-content">
-      <img src="<?php echo $product['ProductPickture']; ?>" class="productPage-main-contentPick">
+      <img src="IMG/<?php echo $product['ProductPickture']; ?>" class="productPage-main-contentPick">
       <div class="productPage-main-contentDiscritption">
 
         <div class="display-flex productPage-contentDiscription-text">
@@ -45,7 +45,18 @@
           <h3>Описание:</h3><p><?php echo $product['ProductDiscription']; ?></p>
         </div>
 
-        <a href="add-to-cart.php?id=<?php echo $product['ProductId']; ?>" class="productPage-contentDiscription-btn"><button class="productPage-contentDiscription-btn">Добавить в корзину</button></a>
+        <?php if($_COOKIE['user'] != "" or $_COOKIE['admin'] != ""){
+          ?>
+        <a href="add-to-cart.php?id=<?php echo $product['ProductId']; ?>" class="productPage-contentDiscription-btn">Добавить в корзину</a>
+        <?php
+        }
+          if ($_COOKIE['admin'] != ""){
+            ?>
+            <a href="dropProduct.php?id=<? echo $product['ProductId']; ?>" class="productPage-admin-dropProduct">Удалить товар</a>
+            <a href="editProduct.php?id=<? echo $product['ProductId']; ?>" class="productPage-admin-editProduct">Редактировать товар</a>
+          <?php
+          } 
+        ?>
       </div>
       </div>
   </div>
