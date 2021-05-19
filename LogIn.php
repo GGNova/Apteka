@@ -2,10 +2,6 @@
 
 require_once 'connection.php';
 
-$AdminLog = 'Bylaranzaa';
-
-$AdminPas = 'KJeEvK6yUOTYQ5qjSCMc';
-
 $login = filter_var(trim($_POST['login']),
 FILTER_SANITIZE_STRING);
 
@@ -18,18 +14,17 @@ $result = $mysqli->query("SELECT * FROM user WHERE userLog = '$login' and userPa
 
 $user = $result->fetch_assoc();
 
-if(count($user) == 0){
-    echo 'Такой пользователь не существует';
+if($user == 0){
+    echo 'Такой пользователь не существует ';
+    echo ' <a href="index.php">На главную</a>';
     exit();
-}else if($user['UserType'] = 1) {
+}else if($user['UserType'] == 1) {
     setcookie('admin', $user['userFIO'], time() + 3600 * 24 * 7, "/");
 }else{
     setcookie('user', $user['userFIO'], time() + 3600 * 24 * 7, "/");
 }
 
 setcookie('userId', $user['userId'], time() + 3600 * 24 * 7, "/");
-
-$mysqli->close();
 
 header('Location: index.php');
 

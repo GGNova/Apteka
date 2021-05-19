@@ -1,6 +1,6 @@
 <div class="header">
   <a href="index.php" class="Logo"></a>
-  <form action="cardSeached.php" method="POST" class="">
+  <form action="cardSearched.php" method="POST" class="">
   <input type="search" class="Search-Box" placeholder="Найти нужное лекарство" name="search">
   </form>
   <?php

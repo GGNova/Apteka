@@ -36,6 +36,12 @@
                 <td class="admin-userInfo">
                   <h3>ФИО: </h3>
                   <p><?php echo $user['userFIO']; ?> </p>
+                  <h3>Должность:</h3><p><?php if($user['UserType'] == 1){ 
+                    echo 'Администратор';
+                    }else{
+                      echo 'Пользователь';
+                    } 
+                    ?></p>
                 </td>
               </tr>
               <tr>
@@ -51,7 +57,7 @@
               <tr>
                 <td>
                   <?php
-                          if ($user['userLog'] != 'Bylaranzaa'){
+                          if ($user['UserType'] != 1){
                             ?>
                   <a href="admin-deleteAccount.php?id=<?php echo $user['userId']; ?>">
                     <button class="admin-deleteUser">Удалить Пользователя</button>

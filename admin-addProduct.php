@@ -22,12 +22,8 @@
 
   move_uploaded_file($_FILES['photo']['tmp_name'], $folder);
 
-  echo '<pre>';
-  var_dump($productName, $productPrice, $productCount, $productType, $productProducer, $productDiscription, $productPhoto);
-  echo '</pre>';
-
   $result = $mysqli->query("INSERT INTO product VALUES(NULL, '$productName', '$productType', '$productPrice', '$productPhoto', '$productProducer', '$productCount', '$productDiscription','$productBrief', NULL)");
 
-  // header("Location: index.php");
+  header("Location: index.php");
 
 ?>

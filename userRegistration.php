@@ -18,16 +18,20 @@
     FILTER_SANITIZE_STRING);
     
     if(mb_strlen($login) < 5 || mb_strlen($login) >20){
-        echo"Недопустимая длина логина";
+        echo"Недопустимая длина логина ";
+        echo ' <a href="index.php">На главную</a>';
         exit();
     }else if (mb_strlen($FIO) < 1 || mb_strlen($FIO) > 90){
-        echo"Недопустимая длина имени";
+        echo"Недопустимая длина имени ";
+        echo ' <a href="index.php">На главную</a>';
         exit();
     }else if (mb_strlen($password) < 6 || mb_strlen($password) > 20){
-        echo"Недопустимая длина пароля";
+        echo"Недопустимая длина пароля ";
+        echo ' <a href="index.php">На главную</a>';
         exit();
     }else if (mb_strlen($phone)  != 11){
-        echo"Недопустимая длина телефона";
+        echo"Недопустимая длина телефона ";
+        echo ' <a href="index.php">На главную</a>';
         exit();
     }
     
@@ -45,8 +49,6 @@
         exit();
     }else{
         $mysqli->query("INSERT INTO user VALUES(NULL,'$FIO', '$login', '$password', '0', '$phone')");
-
-        $mysqli->close();
     
         header('Location: index.php');
     }

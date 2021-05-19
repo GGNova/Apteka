@@ -30,7 +30,7 @@
                                     <div class="admin-sections-info">
                                         <p>Название: <?php echo $productType['ProductTypeName'] ?></p>
                                         <div class="admin-sections-btns">
-                                            <a href="admin-editSection.php?name=<? echo $productType['ProductTypeName']; ?>&img=<? echo $productType['ProductTypeImage']; ?>" class="admin-sections-edit">Редактировать</a>
+                                            <a href="admin-editSection.php?name=<? echo $productType['ProductTypeName']; ?>&img=<? echo $productType['ProductTypeImage']; ?>&id=<? echo $productType['ProductTypeId']; ?>" class="admin-sections-edit">Редактировать</a>
                                             <a href="#" class="admin-sections-delete">Удалить</a>
                                         </div>
                                     </div>

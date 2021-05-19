@@ -1,6 +1,12 @@
 <?php
 
+    require_once 'connection.php';
+
     $newName = $_POST['newName'];
+
+    $sectionId = $_POST['productId'];
+
+    var_dump($sectionId);
 
     $newIcon = $_FILES['photo']['name'];
 
@@ -8,13 +14,14 @@
 
     move_uploaded_file($_FILES['photo']['tmp_name'], $folder);
 
-    var_dump($newIcon);
+    // var_dump($newIcon, $newName);
 
-    if($newIcon = ""){
-        $result = $mysqli -> query()
+    if($newIcon == ""){
+        $result = $mysqli -> query("UPDATE producttype SET ProductTypeName = '$newName' WHERE ProductTypeId = '$sectionId'");
+    }else if($newIcon != ""){
+        $result = $mysqli -> query("UPDATE producttype SET ProductTypeName = '$newName' WHERE ProductTypeId = '$sectionId'");
+        $result2 = $mysqli -> query("UPDATE producttype SET ProductTypeImage = '$newIcon' WHERE ProductTypeId = '$sectionId'");
     }
-
-    // $result = $mysqli -> query();
 
     header("Location: index.php");
 
